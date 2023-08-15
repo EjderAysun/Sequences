@@ -1,0 +1,1 @@
+My OEIS user page: https://oeis.org/wiki/User:Ejder_Aysun
