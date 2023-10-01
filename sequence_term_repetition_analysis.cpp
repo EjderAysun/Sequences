@@ -325,9 +325,6 @@ int main() {
             // If you want to use Algorithm2, open the bottom comment lines and close the top one.
             // SequenceTermRepetitionControl::ControlAlgorithmOfChunkOfPartOfBaseSeq2(n, numOfPossibleChunk, chunksOfPartOfBaseSeq, successfulChunkings, unsuccessfulChunkings, numOfRepetitiveSeq, numOfNonRepetitiveSeq);
             TextManager::WrapText(TextManager::PossibleChunksText(n, chunksOfPartOfBaseSeq), MAX_CHAR_PER_LINE, writeFile);
-            // unsuccessfulChunkings.push_back(n);
-            // unsuccessfulChunkings.push_back(-n);
-            // numOfNonRepetitiveSeq++;
         } else {
             TextManager::WrapText(TextManager::NumOfPossibleChunksText(n, numOfPossibleChunksOfPartOfBaseSeq, partOfBaseSeq), MAX_CHAR_PER_LINE, writeFile);
             for (int numOfPossibleChunk : numOfPossibleChunksOfPartOfBaseSeq) {
