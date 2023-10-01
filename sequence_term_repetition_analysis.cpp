@@ -317,6 +317,17 @@ int main() {
         list<int> numOfPossibleChunksOfPartOfBaseSeq;
         SequenceTermRepetitionAnalysis::GetNumOfPossibleChunksOfPartOfBaseSeq(n, numOfPossibleChunksOfPartOfBaseSeq);
         if(!SequenceTermRepetitionAnalysis::IsThereADivisorOtherThanItselfAndOne(n)) {
+            /*
+            Except for one-term sequences (?), every sequence has at least one
+            "number of possible chunks" because every sequence can be broken
+            into chunks of at least one term.
+
+            Since we know that one-term sequences (?) cannot have"number of possible chunks",
+            I started the for loop at 2. Considering the reason I explained before too,
+            we can conclude that we don't need the NoPossibleChunkWarning(int sizeOfPartOfBaseSeq) method anymore.
+
+            Therefore you do not need to enable the next line.
+            */
             // TextManager::WrapText(TextManager::NoPossibleChunkWarning(n), MAX_CHAR_PER_LINE, writeFile);
             TextManager::WrapText(TextManager::NumOfPossibleChunksText(n, numOfPossibleChunksOfPartOfBaseSeq, partOfBaseSeq), MAX_CHAR_PER_LINE, writeFile);
             vector<list<string>> chunksOfPartOfBaseSeq = SequenceTermRepetitionAnalysis::DivideSequenceIntoChunks(n, n, partOfBaseSeq);
